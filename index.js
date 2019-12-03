@@ -15,6 +15,7 @@ function retrieveImages(num) {
 
 function logDogs(responseJson) {
     console.log(responseJson);
+    $('#dog-display').html('')
     $('#dog-display').append(`<img src="${responseJson.message}" class="img-results">`)
 }
 
