@@ -15,13 +15,13 @@ function retrieveImages(num) {
 
 function logDogs(responseJson) {
     console.log(responseJson);
-    $('#dog-display').html('')
     $('#dog-display').append(`<img src="${responseJson.message}" class="img-results">`)
 }
 
 function submitForm() {
     $('form').submit(event => {
         event.preventDefault(); 
+        $('#dog-display').html('')
         let dogNum = document.getElementById('number-entry').value;
         retrieveImages(dogNum);
     });
